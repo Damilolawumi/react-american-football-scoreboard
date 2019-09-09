@@ -4,8 +4,28 @@ import "./App.css";
 import BottomRow from "./BottomRow";
 
 function App() {
-  //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
+  // TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  
+  // You'll need one for the home score and another for the away score.
 
+  const [homeScore, setHomeScore] = useState (0);
+  const [awayScore, setAwayScore] = useState(false);
+
+//HOME SCORE
+
+  const HomeScoreIncrement = () => {
+    setHomeScore (homeScore + 1)
+  }
+
+  const HomeScoreDecrement = () => {
+    setHomeScore (homeScore - 1)
+  }
+
+  const ResetHomeScore = () => {
+    setHomeScore(0)
+  }
+
+  //AWAY SCORE
+  
   return (
     <div className="container">
       <section className="scoreboard">
